@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="M Firly Fauzi - Junior Data Analyst Portfolio" />
+  <title>M Firly Fauzi | Junior Data Analyst</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --text:#172033;
+      --muted:#5b6474;
+      --line:#e5e9f0;
+      --accent:#22577a;
+      --accent2:#2f6690;
+      --soft:#eaf2f8;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:10;
+      background:rgba(246,248,251,.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+    .brand{font-weight:800;letter-spacing:.3px}
+    .navlinks{display:flex;gap:20px;font-size:14px;color:var(--muted)}
+    .hero{
+      padding:84px 0 56px;
+      display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center
+    }
+    .eyebrow{font-size:14px;font-weight:700;color:var(--accent2);letter-spacing:1px;text-transform:uppercase}
+    h1{font-size:clamp(38px,7vw,68px);line-height:1.04;margin:10px 0 14px}
+    .hero h2{font-size:clamp(22px,3vw,32px);margin:0 0 16px;color:var(--accent)}
+    .lead{font-size:18px;color:var(--muted);max-width:720px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+    .chip{background:var(--soft);color:var(--accent);padding:8px 12px;border-radius:999px;font-size:13px;font-weight:700}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:11px 16px;border-radius:10px;font-weight:700;font-size:14px;
+      border:1px solid var(--accent);transition:.2s ease
+    }
+    .btn.primary{background:var(--accent);color:white}
+    .btn.secondary{background:white;color:var(--accent)}
+    .btn:hover{transform:translateY(-1px)}
+    .hero-card{
+      background:linear-gradient(145deg,#1f4f70,#2f6690);
+      color:white;border-radius:24px;padding:28px;min-height:290px;
+      display:flex;flex-direction:column;justify-content:flex-end
+    }
+    .hero-card .mini{opacity:.82;font-size:14px}
+    .hero-card .big{font-size:28px;font-weight:800;margin:6px 0}
+    section{padding:58px 0}
+    .section-title{font-size:30px;margin:0 0 8px}
+    .section-sub{color:var(--muted);margin:0 0 28px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+    .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .skill{
+      background:var(--card);border:1px solid var(--line);border-radius:14px;
+      padding:18px;font-weight:700;text-align:center
+    }
+    .projects{display:grid;gap:26px}
+    .project{
+      background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+      display:grid;grid-template-columns:1.1fr .9fr
+    }
+    .project img{width:100%;height:100%;min-height:320px;object-fit:cover;background:#eef2f6}
+    .project-content{padding:26px}
+    .project h3{font-size:25px;margin:0 0 8px}
+    .stack{font-size:13px;font-weight:800;color:var(--accent2);text-transform:uppercase;letter-spacing:.5px}
+    .project p{color:var(--muted)}
+    .callout{
+      background:#f8fbfd;border-left:4px solid var(--accent2);
+      padding:12px 14px;border-radius:8px;margin:14px 0;color:#344054
+    }
+    .project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .contact{
+      background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;
+      display:flex;align-items:center;justify-content:space-between;gap:24px
+    }
+    footer{padding:30px 0 50px;color:var(--muted);font-size:14px;text-align:center}
+    @media (max-width:850px){
+      .hero,.about-grid,.project{grid-template-columns:1fr}
+      .hero{padding-top:52px}
+      .skills-grid{grid-template-columns:repeat(2,1fr)}
+      .project img{min-height:240px}
+      .navlinks{display:none}
+      .contact{flex-direction:column;align-items:flex-start}
+    }
+    @media (max-width:520px){
+      .skills-grid{grid-template-columns:1fr 1fr}
+      h1{font-size:42px}
+      .project-content{padding:20px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">M Firly Fauzi</div>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container hero">
+    <div>
+      <div class="eyebrow">Junior Data Analyst</div>
+      <h1>M Firly Fauzi</h1>
+      <h2>Turning data into clear insights and actionable dashboards.</h2>
+      <p class="lead">
+        Career switcher with hands-on project experience in SQL, Python, Excel, Power BI, Tableau, and Looker Studio.
+        Focused on data cleaning, exploratory analysis, visualization, and business insights.
+      </p>
+      <div class="chips">
+        <span class="chip">SQL</span><span class="chip">Excel</span><span class="chip">Python</span>
+        <span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Looker Studio</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn secondary" href="https://github.com/firlyfauzi-design" target="_blank">GitHub</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/mfirlyfauzi" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="mini">Portfolio focus</div>
+      <div class="big">Business-focused data analysis</div>
+      <div class="mini">Sales • HR Analytics • Marketing Performance</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-sub">A concise overview of my background and career transition.</p>
+      <div class="about-grid">
+        <div class="panel">
+          <p>
+            I am an aspiring Junior Data Analyst with previous experience in hospitality and customer service.
+            I recently completed a Data Analytics Bootcamp and built portfolio projects using SQL, Python,
+            Power BI, and Tableau.
+          </p>
+        </div>
+        <div class="panel">
+          <p>
+            My previous professional experience strengthened my attention to detail, teamwork, communication,
+            and problem-solving skills. I am now focused on applying those strengths to data-driven work and
+            continuing to grow in analytics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-sub">Tools and capabilities used across my portfolio projects.</p>
+      <div class="skills-grid">
+        <div class="skill">SQL / BigQuery</div>
+        <div class="skill">Microsoft Excel</div>
+        <div class="skill">Python / Pandas</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Tableau</div>
+        <div class="skill">Looker Studio</div>
+        <div class="skill">Data Cleaning & EDA</div>
+        <div class="skill">Dashboard Development</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-sub">Three projects demonstrating data analysis, visualization, and business thinking.</p>
+
+      <div class="projects">
+        <article class="project">
+          <img src="assets/superstore_dashboard.png" alt="Superstore Power BI dashboard" />
+          <div class="project-content">
+            <div class="stack">SQL • Power BI • Sales Analytics</div>
+            <h3>Superstore Sales & Profit Analysis</h3>
+            <p>
+              Analyzed sales data to evaluate performance and profitability across products, customer segments,
+              regions, and discount levels. Built an interactive Power BI dashboard to surface trends and
+              loss-making areas.
+            </p>
+            <div class="callout"><b>Key insight:</b> Some products generated strong sales but negative profit, while higher discount levels were associated with weaker profitability.</div>
+            <div class="callout"><b>Recommendation:</b> Review discount strategies and investigate loss-making products to improve overall profit margins.</div>
+            <div class="project-actions">
+              <a class="btn primary" href="https://github.com/firlyfauzi-design/superstore-sales-analysis" target="_blank">View Project</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="assets/hr_attrition_dashboard.png" alt="HR Employee Attrition Tableau dashboard" />
+          <div class="project-content">
+            <div class="stack">Tableau • HR Analytics • Data Visualization</div>
+            <h3>HR Employee Attrition Analysis</h3>
+            <p>
+              Analyzed employee attrition patterns across departments, job roles, overtime, income levels,
+              and age groups. Built an interactive Tableau dashboard for workforce retention analysis.
+            </p>
+            <div class="callout"><b>Key insight:</b> Attrition was concentrated among employees working overtime, younger employees, and several high-turnover roles.</div>
+            <div class="callout"><b>Recommendation:</b> Review workload and overtime practices and strengthen retention strategies for higher-risk employee groups.</div>
+            <div class="project-actions">
+              <a class="btn primary" href="https://public.tableau.com/app/profile/firly.fauzi/viz/HREmployeeAttritionAnalysis_17889248471260/Dashboard1" target="_blank">View Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="assets/marketing_channel_conversion.png" alt="Marketing Channel conversion rate analysis" />
+          <div class="project-content">
+            <div class="stack">Python • Pandas • Matplotlib</div>
+            <h3>Marketing Channel Analysis</h3>
+            <p>
+              Analyzed marketing channel performance and conversion rates using Python. Performed data cleaning
+              and exploratory analysis to compare channel effectiveness and support business recommendations.
+            </p>
+            <div class="callout"><b>Key insight:</b> Referral achieved the highest conversion rate, while Social Media had the lowest conversion rate among the channels analyzed.</div>
+            <div class="callout"><b>Recommendation:</b> Prioritize high-performing channels while reviewing Social Media strategy and efficiency.</div>
+            <div class="project-actions">
+              <a class="btn primary" href="https://github.com/firlyfauzi-design/marketing_channel_analysis" target="_blank">View Project</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <div>
+          <h2 class="section-title" style="margin-bottom:4px">Let's Connect</h2>
+          <p class="section-sub" style="margin:0">Open to Junior Data Analyst and entry-level analytics opportunities.</p>
+        </div>
+        <div class="actions" style="margin:0">
+          <a class="btn primary" href="mailto:firlyfauzi96@gmail.com">Email Me</a>
+          <a class="btn secondary" href="https://github.com/firlyfauzi-design" target="_blank">GitHub</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/mfirlyfauzi" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 M Firly Fauzi • Junior Data Analyst Portfolio</div>
+</footer>
+</body>
+</html>
